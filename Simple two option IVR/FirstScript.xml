@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+<Gather action="pathTo:en.xml">
+    <Pause length="1"/>
+    <Say voice="alice">For English please press any number.</Say>
+    <Say voice="alice" language="es-MX">Para Español por favor continue en la linea.</Say>
+</Gather>
+    <Redirect>pathTo:es.xml</Redirect>
+</Response>

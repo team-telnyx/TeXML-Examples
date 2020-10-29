@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say voice="alice" language="en-US">Please wait on the line while an agent takes your call</Say>
+    <Dial>
+        <Number>+1XXXXXXXXXX</Number>
+    </Dial>
+</Response>
