@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
+<!-- The Say verb reads out whatever you write here in the specified language, alice is an amazon poly voice which sounds more natural than the default options. -->
     <Say voice="alice" language="en-US">Please wait on the line while an agent takes your call</Say>
+<!-- The Dial verb dials into an external number, you just need to make sure you add the correct number in +E.164 format -->
     <Dial>
         <Number>+1XXXXXXXXXX</Number>
     </Dial>
