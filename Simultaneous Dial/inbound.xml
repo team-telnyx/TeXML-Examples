@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This script answers the call, plays a greeting and attempts to connect the call to an available agent -->
+<Response>
+<!-- The play verb plays a greeting from an MP3 file when the call is answered -->
+    <Play>http://49adbb042a2f.ngrok.io/audio/hello</Play>
+    <!-- The dial verb dials simultaneous calls to the numbers listed below and proceeds to the next script denoted in action if the call is not answered it also records the call. -->
+    <Dial record="record-from-answer-dual" recordingStatusCallback="https://pathwheretosendrecordinginfo">
+	<!-- Each Number noun specifies an agent that will be dialed simultaneously when an inbound call is received. -->
+	<Number>+1XXXXXXXXXX</Number>
+	<Number>+1XXXXXXXXXX</Number>
+	<Number>+1XXXXXXXXXX</Number>
+	<Number>+1XXXXXXXXXX</Number>
+    </Dial>
+    <Pause length="1"/>
+	<!-- The Redirect Verb is triggered whenever nobody answerd the call and no other actions happened. This is useful when sending the caller to voicemail in case nobody was available to take the call. Do consider that if an Agent answers the call and then hangs up first the caller would still get sent to the next xml script. -->
+    <Redirect method="GET">http://pathtonextxmlscript</Redirect>
+</Response>
