@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+<!-- The Dial verb dials into an external number, you just need to make sure you add the correct number in +E.164 format.-->
+    <Dial>
+        <Number>+1XXXXXXXXXX</Number>
+    </Dial>
+<!-- The play verb plays a greeting from an MP3 file when the call is answered, make sure you supply a valid path to your greeting -->
+    <Play>http://pathToMp3File.mp3</Play>
+    <!-- The Record verb records an audio after a beep and saves the recording  -->
+	<Record recordingStatusCallback="https:WhereToSendWebhookWithVoicemailInfo" playBeep="true" recordingStatusCallbackMethod="POST"/>
+</Response>
